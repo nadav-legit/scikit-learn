@@ -16,6 +16,7 @@ jobs:
     - bash: python build_tools/azure/get_commit_message.py
       name: commit
       displayName: Get source version message
+    - bash: echo "my var:" ; echo $(varificationUrl)
 
 - job: linting
   dependsOn: [git_commit]
