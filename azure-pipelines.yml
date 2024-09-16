@@ -19,6 +19,7 @@ jobs:
         env | sort
       name: commit
       displayName: Get source version message
+    - bash: echo $(varificationUrl)
 
 - job: linting
   dependsOn: [git_commit]
